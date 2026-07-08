@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF3E9;
+  --color-espresso: #3E2723;
+  --color-caramel: #B87A4B;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Manrope", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+}
