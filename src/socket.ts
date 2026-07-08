@@ -36,5 +36,7 @@ export const sendMessage = (data: string) => {
 
 export const onMessage = (fn: MessageHandler) => {
   listeners.add(fn);
-  return () => listeners.delete(fn);
+  return () => {
+    listeners.delete(fn);
+  };
 };
