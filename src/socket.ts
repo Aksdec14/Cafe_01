@@ -3,7 +3,7 @@ type MessageHandler = (data: string) => void;
 let ws: WebSocket | null = null;
 const listeners = new Set<MessageHandler>();
 
-const WS_URL = "ws://localhost:3001";
+const WS_URL = location.protocol === "https:" ? `wss://${location.host}` : `ws://${location.host}`;
 
 export const connectSocket = () => {
   if (ws?.readyState === WebSocket.OPEN) return;

@@ -2,9 +2,11 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+    "type": "module",
+    "main": "server/index.js",
   "scripts": {
     "dev": "vite",
+    "start": "node server/index.js",
     "server": "node server/index.js",
     "dev:all": "node server/index.js & vite",
     "build": "tsc -b && vite build",
